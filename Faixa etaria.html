@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faixa etaria</title>
+<script>
+    function processar(){
+        let nome = document.getElementById("nomepessoa").value;
+        alert(nome);
+        let idade = document.getElementById("idade").value;
+        alert(idade);
+        let faixa = "Você é: " + definirFaixa(idade);
+        let saida = "<p>Olá, " + nome + "<p>" + faixa;
+            let result = document.getElementById("resultado");
+            result.innerHTML = saida;
+    }
+    function definirFaixa(idade){
+        //alert("Direto da função " + idade);
+        let retorno="";
+        if (idade <=18){
+            retorno = "Criança";
+        }
+        else if(idade >= 18 && idade < 65){
+            retorno = "Adulto";
+        }
+        else{
+            retorno= "Idoso";
+        }
+        return retorno;
+    }
+</script>
+</head>
+<body>
+    <form>
+        <div>
+        <label> Nome: </label>
+        <input type = "text" id="nomepessoa"
+        placeholder="Informe o seu nome" maxlength="30"/>
+        </div>
+        <div>
+        <input type="number" id="idade"
+        placeholder="Infome a idade" min="1" max="200" />
+        </div>
+        <input type="button" value="Clique aqui"
+        onclick="processar()" />
+        <div id="resultado">
+
+            <div>
+    </form>
+
+</body>
+</html>

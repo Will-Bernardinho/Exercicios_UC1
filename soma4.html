@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let soma = 0;
+        while(true){
+            let n = parseInt(prompt("Informe o numero"));
+            soma  = soma + n;
+            let r = prompt("Deseja continuar? s/n");
+            alert(r + "\n" + r.substring(0,1));
+            if (r.substring(0,1).toLowerCase() == "n"){
+                break;
+            }
+        }
+        alert("A soma é: " + soma);
+    </script>
+</body>
+</html>

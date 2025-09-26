@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agencia</title>
+
+    <script>
+        let estoque=[];
+
+        function cadastrar(){
+            let modelo=document.getElementById("modelo").value;
+            let ano= parseInt(document.getElementById("ano").value);
+            let preco = parseFloat(document.getElementById("preco").value);
+
+            estoque.push([modelo, ano, preco]);
+            let result= document.getElementById("resultado");
+            result.innerHTML= saida();
+
+            document.getElementById("modelo").value="";
+            document.getElementById("ano").value="";
+            document.getElementById("preco").value="";
+        }
+
+        function saida(){
+            let retorno= "";
+            for(let x=0; x<estoque.length; x=x+1){
+                for(let y=0; y< estoque[x].length; y=y+1){
+                    retorno += estoque[x][y] + "     ";
+                }
+                retorno +="</br>";
+            }
+            return retorno;
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <input type="text" id="modelo"
+        placeholder="Modelo do carro" />
+        <input type="number" id="ano"
+        placeholder="Ano do carro" />
+        <input tupe="number" id="preco"
+        placeholder="Preço do carro" step=".01"/>
+        <input type="button" value="Gravar"
+        onclick="cadastrar()" />
+
+        <div id= "resultado"> </div>
+    </form>
+</body>
+</html>

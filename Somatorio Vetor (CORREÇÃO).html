@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Correção do Professor</title>
+
+    <script>
+        let numeros=[];
+        
+        function cadastrar() {
+                let n = parseInt(document.getElementById("numero").value);
+                numeros.push(n);
+    
+                document.getElementById("numero").value = "";
+                let result = document.getElementById("resultado");
+                result.innerHTML = saida();
+        }
+    
+                function saida(){
+                    let retorno = "";
+                    for (let x=0; x < numeros.length; x = x + 1) {
+                        retorno += numeros [x] + "</br>";
+                    }
+                    return retorno;
+                }
+    
+                function somar() {
+                    let total = 0;
+                    for (let x=0; x < numeros.length; x = x + 1){
+                        total += numeros[x];
+                    }
+                    return total;
+                }
+    
+                function media() {
+                    let total = somar() / numeros.length;
+                    alert("A média é " + total);
+                }
+        </script>
+</head>
+<body>
+    <form>
+        <form>
+            <input type='number' id='numero' />
+            <input type='button' value="Gravar"
+                onclick="cadastrar()" />
+                <input type="button" value="Somatório"
+                onclick="alert('A soma é ' + somar()) "/>
+                <input type="button" value="Média"
+                onclick="media()" />
+                <div id="resultado"></div>
+                </form>
+    </form>
+
+</body>
+</html>

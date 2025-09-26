@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Aula de hoje</h1>
+    <script>
+        /*
+        Faça um programa que receba o ao de nascimento de uma pessoa e o ano atual, calcule e mostre;
+        a) a idade dessa pessoa em anos;
+        b) a idade dessa pessoa em anos;
+        c) a idade dessa pessoa em dias;
+
+        + (Adição)
+        - (Subtração)
+         */
+        //Entrada)
+               var anonasc = prompt("Informe ano de nascimento")
+               var anoatual = prompt("Informe ano atual");
+
+               //Processamento
+               var idade = parseInt(anoatual) - parseInt(anonasc)
+               var meses  = idade * 12;
+               var dias = meses * 30
+               
+               //Saída
+               alert("A sua idade em ano é: " + idade +
+               "\nA sua idade em meses é: " + meses +
+               "\nA sua idade em dias é: " + dias);
+
+    </script>
+</body>
+</html>

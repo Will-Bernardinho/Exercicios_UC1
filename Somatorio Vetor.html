@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media com vetor</title>
+    <script>
+        let contador=[];
+        let numero;
+        function gravar(){
+            let numero= document.getElementById("numero").value
+            contador.push(parseFloat(numero));
+        }
+        function somatorio(){
+            let numero=0;
+            for(let i=0; i< contador.length; i=i+1){
+                numero += contador[i];
+            }
+            return numero;
+        }
+        function media(){
+            let med=0;
+            med= somatorio()/contador.length;
+            return med;
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <div align="center">
+        <input type='text' id='numero' name='numero';
+        placeholder="Informe o numero"/>
+        <input type='button' value="Gravar"
+        onclick="gravar()" />
+        <input type="button" value="Somatorio"
+        onclick="alert(somatorio())"/>
+        <input type="button" value="Media"
+        onclick="alert(media())"/>
+    </div>
+        <div id="resultado"></div>
+    </form> 
+</body>
+</html>

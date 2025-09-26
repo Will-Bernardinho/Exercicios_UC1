@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matriz</title>
+
+    <script>
+        let vetor=[];
+        vetor.push("William");
+        vetor.push(40);
+        vetor.push(3.30);
+        vetor.push(new Date());
+        vetor.push(["Luis", 30])
+
+        for(let x=0; x< vetor.length; x=x+1){
+            document.write(vetor[x] + "</br>");
+        }
+
+        let matriz=[];
+        matriz.push(["Luis", "luis@teste.com", "494949"]);
+        matriz.push(["Renato", "renato@teste", "393939"]);
+        matriz.push(["Carla", "carla@gmail.com", "xxxx"]);
+
+        document.write("ELEMENTOS DA MATRIZ </br>");
+
+        for(let x=0; x < matriz.length; x=x+1){
+            document.write(matriz[x] + "</br>");
+            for(let y=0; y < matriz[x].length; y=y+1){
+                document.write(matriz[x][y] + "-");
+
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

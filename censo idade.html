@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Censo de idade</title>
+</head>
+<body>
+    <script>
+        let media=0;
+        let idadeL =0;
+        let maiores18 =0;
+        let resp = "n";
+        let idade = 0;
+        do{
+            let idade =  parseInt(prompt("Informe a idade:"));
+            media = media + idade;
+            resp = prompt("Deseja continuar? s/n");
+            idadeL = idadeL + 1;
+            if (idade >=18){
+                maiores18 = maiores18 +1;
+            }
+        }
+        while (resp =="s" || resp == "S")
+        
+alert("A quantidade das idades é: " + idadeL + "\nA quantidade de pessoas acima de 18 anos é: " + maiores18 +
+      "\nA media de todas as idades é: " + (media/idadeL) );
+    </script>
+</body>
+</html>

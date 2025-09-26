@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preço</title>
+</head>
+<body>
+    <script>
+        let preco = 0;
+        let soma=0;
+        let i=0;
+        for (i =1; i<=10; i=i+1){
+            preco = parseFloat(prompt("Informe o preço: "));
+            if (preco >= 200){
+                soma = soma+preco;
+            }
+            alert("O somatorio dos produtos acima de 200 é: " + soma);
+        }
+    </script>
+</body>
+</html>

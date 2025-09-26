@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo Altura</title>
+</head>
+<body>
+    <script>
+        let alt = prompt("informe a altura em metros:");
+        let sexo = prompt("Informe o sexo:");
+        let peso;
+        if (sexo == "M") {
+            peso = (72.7*alt)-58;
+            alert("O peso ideal é: " + parseFloat(peso));
+
+        }
+        else {
+            peso = (62.1*alt) - 44.7;
+            alert("O peso ideal é:" + parseFloat(peso));
+        }
+    
+    </script>
+</body>
+</html>

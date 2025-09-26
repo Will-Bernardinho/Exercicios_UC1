@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Informática</title>
+</head>
+<body>
+    <script>
+        let cod = parseInt(prompt("Digite o código: "));
+        let qntd = parseInt(prompt("Digite a quantidade"));
+        let total =0.0;
+        switch (cod){
+            case 10:
+                total = 40*qntd;
+                alert("O total da compra é: " + total);
+                break;
+            case 11:
+                total = 150*qntd;
+                alert("O total da compra é: " + total);
+                break;
+            case 12:
+                total = 15*qntd;
+                alert("O total da compra é: " + total);
+                break;
+            case 13:
+                total = 35*qntd;
+                alert("O total da compra é: " + total);
+                break;
+            case 14:
+                total = 20*qntd;
+                alert("O total da compra é " + total);
+                break;
+            default:
+                alert("aaqui");
+        }
+    </script>
+</body>
+</html>

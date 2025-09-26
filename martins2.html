@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let total =0.0;
+        while(true){
+        let cad = "s";
+        let cod = parseInt(prompt("Digite o código: "));
+        let qntd = parseInt(prompt("Digite a quantidade"));
+        let preco = 0;
+        switch (cod){
+            case 10:
+                preco =  40;
+                //alert("O total da compra é: " + total);
+                break;
+            case 11:
+                preco = 150;
+                //alert("O total da compra é: " + total);
+                break;
+            case 12:
+                preco = 15;
+                //alert("O total da compra é: " + total);
+                break;
+            case 13:
+                preco = 35;
+                //alert("O total da compra é: " + total);
+                break;
+            case 14:
+                preco = 20;
+                //alert("O total da compra é " + total);
+                break;
+            default:
+                alert("aaqui");
+        }
+        total = total + (preco * qntd);
+        cad = prompt("Deseja continuar: s/n");
+        if (cad=="n" || cad=="N"){
+break;
+        }
+    }
+    alert("O total da compra é " + total);
+    </script>
+</body>
+</html>
