@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        let aluno=[];
+        //let media;
+        function cadastrar(){
+            let nome=document.getElementById("nome").value;
+            let nota1= parseInt(document.getElementById("nota1").value);
+            let nota2 = parseFloat(document.getElementById("nota2").value);
+
+            let media = calcularmedia(nota1, nota2);
+            let sit = situação(media);
+            aluno.push([nome, nota1, nota2, media, sit]);
+            let result= document.getElementById("resultado");
+            result.innerHTML= saida();
+
+            document.getElementById("nome").value="";
+            document.getElementById("nota1").value="";
+            document.getElementById("nota2").value="";
+        }
+        function situação(med){
+            if (med>=7){
+                return "Aprovado";
+            }
+            else
+            return "Reprovado";
+        }
+        function calcularmedia(n1, n2){
+            media=(n1+n2)/2;
+            return media;
+        }
+        function saida(){
+            let retorno= "";
+            for(let x=0; x<aluno.length; x=x+1){
+                for(let y=0; y< aluno[x].length; y=y+1){
+                    retorno += aluno[x][y] + "     ";
+                }
+                retorno +="</br>";
+            }
+            return retorno;
+        }
+
+    </script>
+</head>
+<body>
+    <form>
+        <input type="text" id="nome"
+        placeholder="Digeite o nome do Aluno" />
+        <input type="number" id="nota1"
+        placeholder="Digite a primeira nota" />
+        <input tupe="number" id="nota2"
+        placeholder="Digite a segunda nota" step=".01"/>
+        <input type="button" value="Gravar"
+        onclick="cadastrar()" />
+
+        <div id='resultado'></div>
+        </form>
+
+</body>
+</html>
